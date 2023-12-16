@@ -11,7 +11,7 @@ class Event(SQLModel, table=True):
 
     class Config:
         arbitrary_types_allowed = True
-        schema_extra = {
+        json_schema_extra = {
             "example":  {
                 "title": "FastAPI Book Launch",
                 "image": "https://linktomyimage.com/image.png",
@@ -29,7 +29,7 @@ class EventUpdate(SQLModel):
     location: Optional[str]
 
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "title": "FastAPI Book Launch",
                 "image": "https://linktomyimage.com/image.png",
